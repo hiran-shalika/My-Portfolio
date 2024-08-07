@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Basic Setup  */
+
+/* Variable  */
+:root{
+    --primary-color: #FF5A00;
+    --page1: #212121;
+    --page2: #2A2A2A
+}
+
+span{
+    color: var(--primary-color);
+}
+
+section {
+    padding: 100px 100px;
+}
+
+.title{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about .title{
+    text-align: start;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* HEader Start  */
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+
+.logo{
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav-list{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.banner-title-and-others{
+    padding-left: 100px;
+}
+
+header{
+    background-image: url(img/background.jpg);
+    height: 950px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    height: 750px;
+}
+
+.banner h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.banner h1 span{
+    color: var(--primary-color);
+}
+
+.banner h3{
+    font-size: 40px;
+    color: #fff;
+}
+
+.banner p{
+    font-size: 18px;
+    width: 500px;
+    color: #fff;
+    margin: 40px 0;    
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    outline: none;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+/* About Section Starting  */
+
+.about {
+    background-color: var(--page1);
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Adjust as needed */
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.side {
+    flex: 1;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.about-profile {
+    display: flex;
+    justify-content: center; /* Center image */
+}
+
+.about-profile img {
+    width: 60%; /* Adjust image width as necessary */
+    border-radius: 16px;
+    transition: transform 0.3s ease; /* Smooth image scaling */
+}
+
+/* Image animation from left */
+.hidden-img {
+    opacity: 0;
+    transform: translateX(-100px); /* Start from the left */
+}
+
+.show-img {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Text animation from right */
+.hidden-text {
+    opacity: 0;
+    transform: translateX(100px); /* Start from the right */
+}
+
+.show-text {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+.about-content p {
+    line-height: 1.5; /* Improved readability */
+    color: #fff;
+    width: 605px; /* Set to desired width */
+}
+
+.title {
+    color: #fff;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden-img, .hidden-text {
+        transition: none; /* Disable transition for users who prefer reduced motion */
+    }
+}
+
+
+/* Starting My Service  */
+
+.services{
+    background-color: var(--page2);
+}
+
+.service-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.single-service{
+    background-color: var(--page1);
+    color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.single-service i{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.single-service h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.single-service p{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.btn-secondery{
+    background-color: var(--page2);
+    border: none;
+    padding: 5px 8px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.single-service {
+    background-color: var(--page1);
+    color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    transform: translateY(20px); /* Move cards down */
+    opacity: 0; /* Make cards invisible */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Transition for smooth animation */
+}
+
+.single-service.visible {
+    transform: translateY(0); /* Move cards back to original position */
+    opacity: 1; /* Make cards visible */
+}
+
+/* Starting My Service  */
+
+.services{
+    background-color: var(--page2);
+}
+
+.service-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.single-service{
+    background-color: var(--page1);
+    color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.single-service i{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.single-service h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.single-service p{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.btn-secondery{
+    background-color: var(--page2);
+    border: none;
+    padding: 5px 8px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.single-service {
+    background-color: var(--page1);
+    color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    transform: translateY(20px); /* Move cards down */
+    opacity: 0; /* Make cards invisible */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Transition for smooth animation */
+}
+
+.single-service.visible {
+    transform: translateY(0); /* Move cards back to original position */
+    opacity: 1; /* Make cards visible */
+}
+
+
+/* Starting portfolio */
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden; /* Ensure the overflow is hidden to hide the content initially */
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.roof-of-image {
+    position: absolute;
+    bottom: 0; /* Initially position it at the bottom */
+    left: 0; /* Fixed left value */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-top: 50%; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    transform: translateY(101%);
+    border-radius: 20px;
+}
+
+.roof-of-image h3 {
+    font-size: 30px;
+}
+
+.portfolio-image:hover .roof-of-image {
+    transform: translateY(0);
+}
+
+.project-container { /* Fixed typo here */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Improved responsiveness */
+    gap: 50px;
+}
+
+.projects {
+    background-color: var(--page1);
+}
+
+.single-portfolio {
+    transform: translateY(20px); /* Move cards down */
+    opacity: 0; /* Make cards invisible */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transition for smooth animation */
+}
+
+.single-portfolio.visible {
+    transform: translateY(0); /* Move cards back to original position */
+    opacity: 1; /* Make cards visible */
+}
+
+/* Contact Starting  */
+
+.Contact{
+    background-color: var(--page2);
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-side form input{
+    width: 300px;
+    border: none;
+    font-size: 18px;
+    padding: 16px 30px;
+    margin-bottom: 20px;
+    margin-right: 33px;
+    outline: none;
+    border-radius: 8px;
+}
+
+textarea{
+    width: 637px;
+    height: 271px;
+    padding: 30px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.title-side p{
+    color: #fff;
+    width: 387px;
+}
+
+/* End All Section  */
+
+footer{
+    background-color: var(--page1);
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    padding: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .nav-list li a.active {
+    color: #007bff;
+  }
+
+
+  
+
+  .multiple-text {
+    font-size: px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+ 
+
+/* Fixed Navigation Bar */
+/* Fixed Navigation Bar */
+.main-nav {
+    position: fixed; /* Fixes the navigation bar to the top */
+    top: 0; /* Aligns it to the top of the page */
+    left: 0; /* Aligns it to the left side of the page */
+    width: 100%; /* Ensures it takes the full width of the page */
+    background-color: #ff630f; /* Background color of the nav bar */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    height: 30px;
+}
+
+
+/* Adds padding to the top of the body to avoid content being hidden behind the fixed navbar */
+body {
+    padding-top: 5px; /* Adjust this value based on the height of your navbar */
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .main-nav {
+        flex-direction: row; /* Stack logo and nav items horizontally */
+        padding: 30px 50px;
+    }
+
+    .nav-list {
+        flex-direction: row; /* Stack nav items horizontally */
+    }
+
+    .banner-title-and-others {
+        padding-left: 50px; /* Adjusted padding for larger screens */
+    }
+
+    header {
+        height: 800px; /* Adjusted height for larger screens */
+    }
+
+    .banner h1 {
+        font-size: 48px; /* Adjusted font size for larger screens */
+    }
+
+    .banner h3 {
+        font-size: 30px; /* Adjusted font size for larger screens */
+    }
+
+    .banner p {
+        font-size: 18px; /* Adjusted font size for larger screens */
+        width: 500px; /* Fixed width for larger screens */
+        margin: 40px 0;
+    }
+
+    .container {
+        flex-direction: row; /* Arrange content side by side */
+        align-items: flex-start; /* Align items at the top */
+    }
+
+    .about-profile img {
+        width: 60%; /* Adjusted width for larger screens */
+    }
+
+    .service-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    }
+
+    .project-cotnaienr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+        gap: 50px;
+    }
+
+    .Contact {
+        flex-direction: row; /* Stack form and text side by side */
+        justify-content: space-between;
+    }
+
+    .form-side {
+        width: 60%; /* Adjusted width for larger screens */
+    }
+
+    .title-side p {
+        width: 50%; /* Adjusted width for larger screens */
+    }
+}
+
+/* Desktop and Up */
+@media (min-width: 1024px) {
+    .main-nav {
+        padding: 30px 100px; /* Adjusted padding for desktop screens */
+    }
+
+    .banner-title-and-others {
+        padding-left: 100px; /* Adjusted padding for desktop screens */
+    }
+}
